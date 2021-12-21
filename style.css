@@ -1,3 +1,25 @@
+:root {
+    --backgroundColor: #2382a9;
+    --numberButtonColor: #000;
+    --operationButtonColor: #888;
+    --highlightButtonColor: #FF7F11;
+}
+
+.dark {
+    color: #fff;
+    background-color: var(--numberButtonColor);
+}
+
+.middle{
+    color: #000;
+    background-color: var(--operationButtonColor);
+}
+
+.highlight {
+    color: #000;
+    background-color: var(--highlightButtonColor);
+}
+
 body {
     margin: 0;
     height: 100vh;
@@ -12,7 +34,7 @@ body {
 }
 
 .calculator {
-    background-color: rgb(35, 132, 161);
+    background-color: var(--backgroundColor);
     border-radius: 3vmin;
     padding: 8vmin 4vmin;
 }
@@ -57,16 +79,9 @@ body {
 .button {
     justify-self: center;
     align-self: center;
-    color:white;
-    background-color: black;
     border-radius: 2em;
     height: 3em;
     width: 3em;
-}
-
-.operation {
-    color: #000;
-    background-color: #aaa;
 }
 
 .big {
