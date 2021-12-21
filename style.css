@@ -33,3 +33,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+.button {
+    justify-self: center;
+    align-self: center;
+    color:white;
+    background-color: black;
+    border-radius: 2em;
+    height: 3em;
+    width: 3em;
+}
