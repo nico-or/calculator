@@ -18,3 +18,18 @@
     width: 300px;
     background-color: #fff;
 }
+
+.button-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+.number-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.operation-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
