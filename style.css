@@ -11,12 +11,15 @@
 
 .display-wrapper {
     margin-bottom: 20px;
+    display: flex;
 }
 
 .display {
-    height: 30px;
-    width: 300px;
     background-color: #fff;
+    border-radius: 1em;
+    height: 3em;
+    flex-grow: 1;
+    flex-basis: 100vw;
 }
 
 .button-wrapper {
