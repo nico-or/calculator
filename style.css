@@ -5,17 +5,17 @@
     --highlightButtonColor: #FF7F11;
 }
 
-.dark {
+.colorLow {
     color: #fff;
     background-color: var(--numberButtonColor);
 }
 
-.middle{
+.colorMid{
     color: #000;
     background-color: var(--operationButtonColor);
 }
 
-.highlight {
+.colorHigh {
     color: #000;
     background-color: var(--highlightButtonColor);
 }
@@ -84,18 +84,18 @@ body {
     width: 3em;
 }
 
-.big {
-    height: 6.5em;
+.big1, .big2 {
+    height: calc(2 * var(--size) + var(--gap));
     grid-row-start: -3;
     grid-row-end: -1;
 }
 
-.b1 {
+.big1 {
     grid-column-start: -3;
     grid-column-end: -2;
 }
 
-.b2 {
+.big2 {
     grid-column-start: -2;
     grid-column-end: -1;
 }
