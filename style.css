@@ -43,3 +43,7 @@
     height: 3em;
     width: 3em;
 }
+
+.button.large {
+    height: 6em;
+}
