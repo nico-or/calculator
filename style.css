@@ -1,4 +1,9 @@
-:root {
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: sans-serif;
+    font-size: 3.5vmin;
+
     --backgroundColor: #2382a9;
     --numberButtonColor: #000;
     --operationButtonColor: #888;
@@ -18,13 +23,6 @@
 .colorHigh {
     color: #000;
     background-color: var(--highlightButtonColor);
-}
-
-body {
-    margin: 0;
-    height: 100vh;
-    font-family: sans-serif;
-    font-size: 3.5vmin;
 }
 
 .centered {
