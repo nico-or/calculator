@@ -3,3 +3,18 @@
     justify-content: center;
     align-items: center;
 }
+
+.calculator {
+    background-color: rgb(35, 132, 161);
+    padding: 40px;
+}
+
+.display-wrapper {
+    margin-bottom: 20px;
+}
+
+.display {
+    height: 30px;
+    width: 300px;
+    background-color: #fff;
+}
