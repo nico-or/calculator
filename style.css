@@ -1,5 +1,8 @@
-* {
+body {
+    margin: 0;
+    height: 100vh;
     font-family: sans-serif;
+    font-size: 3.5vmin;
 }
 
 .centered {
@@ -10,12 +13,13 @@
 
 .calculator {
     background-color: rgb(35, 132, 161);
-    padding: 40px;
+    border-radius: 3vmin;
+    padding: 8vmin 4vmin;
 }
 
 .display-wrapper {
     background-color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 5vmin;
     border-radius: 1em;
     height: 3em;
     display: flex;
@@ -31,7 +35,11 @@
 .button-wrapper {
     display: grid;
     grid-template-columns: 3fr 2fr;
-    gap: 20px;
+    gap: 5vmin;
+}
+
+.grid {
+    gap: 2vmin;
 }
 
 .number-wrapper {
@@ -44,9 +52,6 @@
     grid-template-columns: 1fr 1fr;
 }
 
-.grid {
-    gap: 10px;
-}
 
 .button {
     justify-self: center;
