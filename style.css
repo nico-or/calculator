@@ -22,6 +22,7 @@
 .button-wrapper {
     display: grid;
     grid-template-columns: 3fr 2fr;
+    gap: 20px;
 }
 
 .number-wrapper {
@@ -32,6 +33,10 @@
 .operation-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+.grid {
+    gap: 10px;
 }
 
 .button {
