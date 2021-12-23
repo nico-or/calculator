@@ -88,6 +88,7 @@ theDisplay = {
                 default:
                     break;
             }
+            this.firstNumber = String(this.firstNumber)
             this.secondNumber = ""
             this.operation = ""
         }
@@ -101,7 +102,7 @@ theDisplay = {
             this. operation = removeLast(this.operation)
         } else {
             this.firstNumber = removeLast(this.firstNumber)
-            if (this.firstNumber == ""){
+            if (this.firstNumber == "" || this.firstNumber == "-"){
                 this.firstNumber = "0"  
             }
         }
