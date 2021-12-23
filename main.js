@@ -120,7 +120,7 @@ theDisplay = {
             } else {
                 this.secondNumber = this.addNumber(this.secondNumber, input)
             }
-        } else if (isOperation(input)) {
+        } else if (isOperation(input) && this.operation == "") {
             this.operation = input
         }
         this.updateScreen()
