@@ -59,7 +59,9 @@ body {
 }
 
 .grid {
-    gap: 0.5em;
+    --size: 3em;
+    --gap: 0.5em;
+    gap: var(--gap);
 }
 
 .number-wrapper {
@@ -69,17 +71,16 @@ body {
 
 .operation-wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 3em);
-    grid-template-rows: repeat(4, 3em);
+    grid-template-columns: repeat(2, var(--size));
+    grid-template-rows: repeat(4, var(--size));
 }
-
 
 .button {
     justify-self: center;
     align-self: center;
     border-radius: 2em;
-    height: 3em;
-    width: 3em;
+    height: var(--size);
+    width: var(--size);
 }
 
 .big1, .big2 {
