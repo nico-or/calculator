@@ -4,14 +4,18 @@ theDisplay = {
     firstNumber: "0",
     secondNumber: "",
     operation: "",
-    screen: "",
-    update() {
-        this.screen = "";
-        if (this.firstNumber) this.screen += `${this.firstNumber}`;
-        if (this.operation) this.screen += ` ${this.operation}`;
-        if (this.secondNumber) this.screen += ` ${this.secondNumber}`;
-        return this.screen
-    }
+    screen: document.querySelector(".display"),
+
+    updateMessage() {
+        message = this.firstNumber;
+        if (this.operation) this.message += ` ${this.operation}`;
+        if (this.secondNumber) this.message += ` ${this.secondNumber}`;
+        return message
+    },
+
+    updateScreen() {
+        this.screen.textContent = this.updateMessage()
+    },
 }
 
 // basic math functions
@@ -25,5 +29,6 @@ buttons = document.querySelectorAll('.button.number')
 buttons.forEach(
     button => button.addEventListener('click', e => {
         console.log(e.target.textContent)
+        theDisplay.updateScreen()
     })
 );
