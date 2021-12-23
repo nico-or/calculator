@@ -45,7 +45,7 @@ theDisplay = {
         if (this.firstNumber == ""){
             return "0"
         }
-        
+
         message = this.firstNumber
         if (this.operation != "") {
             message += this.operation
@@ -94,6 +94,7 @@ theDisplay = {
                 default:
                     break;
             }
+            // transforming to string avoids problem downstream
             this.firstNumber = String(this.firstNumber)
             this.secondNumber = ""
             this.operation = ""
@@ -109,7 +110,7 @@ theDisplay = {
         } else {
             this.firstNumber = removeLast(this.firstNumber)
             if (this.firstNumber == "-"){
-                this.firstNumber = ""  
+                this.firstNumber = ""
             }
         }
     },
