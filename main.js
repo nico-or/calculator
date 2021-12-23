@@ -20,6 +20,27 @@ theDisplay = {
     updateScreen() {
         this.screen.textContent = this.updateMessage()
     },
+
+    addNumber(oldNumber, newNumber) {
+        if (oldNumber == "0") {
+            return newNumber;
+        } else {
+            return oldNumber + newNumber;
+        }
+    },
+
+    newInput(input) {
+        if (input >= '0' || input <= '9'){
+            if (this.operation == "") {
+                this.firstNumber = this.addNumber(this.firstNumber, input)
+            } else {
+                this.secondNumber = this.addNumber(this.secondNumber, input)
+            }
+        } else if ('+-x÷'.includes(input)) {
+            this.operation = input
+        }
+        this.updateScreen()
+    },
 }
 
 // basic math functions
@@ -32,7 +53,6 @@ const divide = (a, b) => a / b
 buttons = document.querySelectorAll('.button.number')
 buttons.forEach(
     button => button.addEventListener('click', e => {
-        console.log(e.target.textContent)
-        theDisplay.updateScreen()
+        theDisplay.newInput(e.target.textContent)
     })
 );
