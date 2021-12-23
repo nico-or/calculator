@@ -13,7 +13,7 @@ const multiply = (a, b) => a * b;
 const divide = (a, b) => a / b;
 
 // aux functions
-const isNumber = a => (a >= '0' || a <= '9');
+const isNumber = a => (a >= '0' && a <= '9');
 const isOperation = a => '+-x÷'.includes(a);
 
 // display object will hold input information
@@ -26,11 +26,11 @@ theDisplay = {
 
     updateMessage() {
         message = this.firstNumber;
-        if (this.operation) {
-            this.message += ` ${this.operation}`
+        if (this.operation != "") {
+            message += this.operation
         }
-        if (this.secondNumber) {
-            this.message += ` ${this.secondNumber}`
+        if (this.secondNumber != "") {
+            message +=  this.secondNumber
         }
         return message
     },
