@@ -15,12 +15,11 @@ const divide = (a, b) => a / b;
 // aux functions
 const isNumber = a => (a >= '0' && a <= '9');
 const isOperation = a => '+-x÷'.includes(a);
-const trimNumber = function (number, decimals = 2) {
-    numberString = String(number)
-    let indexDot = numberString.indexOf('.')
-    let indexLast = numberString.length-1
+const trimNumber = function (number, decimals = 5) {
+    let indexDot = number.indexOf('.')
+    let indexLast = number.length - 1
     if (indexDot == -1){
-        return numberString
+        return number
     } else {
         let decimalCount = indexLast - indexDot
         return String(
@@ -40,12 +39,14 @@ theDisplay = {
     screen: document.querySelector(".display"),
 
     updateMessage() {
-        message = trimNumber(this.firstNumber)
+        this.firstNumber = trimNumber(this.firstNumber)
+        this.secondNumber = trimNumber(this.secondNumber)
+        message = this.firstNumber
         if (this.operation != "") {
             message += this.operation
         }
         if (this.secondNumber != "") {
-            message +=  trimNumber(this.secondNumber)
+            message +=  this.secondNumber
         }
         return message
     },
