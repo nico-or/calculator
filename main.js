@@ -12,6 +12,10 @@ const subtract = (a, b) => a - b;
 const multiply = (a, b) => a * b;
 const divide = (a, b) => a / b;
 
+// aux functions
+const isNumber = a => (a >= '0' || a <= '9');
+const isOperation = a => '+-x÷'.includes(a);
+
 // display object will hold input information
 // and update screen readings
 theDisplay = {
