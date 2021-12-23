@@ -78,10 +78,26 @@ theDisplay = {
         }
     },
 
+    delete(){
+        removeLast = a => a.slice(0,a.length-1)
+        if (this.secondNumber != ""){
+            this.secondNumber = removeLast(this.secondNumber)
+        } else if (this.operation != "") {
+            this. operation = removeLast(this.operation)
+        } else {
+            this.firstNumber = removeLast(this.firstNumber)
+            if (this.firstNumber == ""){
+                this.firstNumber = "0"  
+            }
+        }
+    },
+
     newInput(input) {
         if (input == 'C') {
             this.reset()
-        } else if (input == '=') {
+        } else if (input == '←'){
+            this.delete()
+        }else if (input == '=') {
             this.calculate()
         } else if (isNumber(input)){
             if (this.operation == "") {
