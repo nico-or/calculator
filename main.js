@@ -8,8 +8,12 @@ theDisplay = {
 
     updateMessage() {
         message = this.firstNumber;
-        if (this.operation) this.message += ` ${this.operation}`;
-        if (this.secondNumber) this.message += ` ${this.secondNumber}`;
+        if (this.operation) {
+            this.message += ` ${this.operation}`
+        }
+        if (this.secondNumber) {
+            this.message += ` ${this.secondNumber}`
+        }
         return message
     },
 
