@@ -47,8 +47,16 @@ theDisplay = {
         }
     },
 
+    reset(){
+        this.firstNumber = "0"
+        this.secondNumber = ""
+        this.operation = ""
+    },
+
     newInput(input) {
-        if (isNumber(input)){
+        if (input == 'C') {
+            this.reset()
+        } else if (isNumber(input)){
             if (this.operation == "") {
                 this.firstNumber = this.addNumber(this.firstNumber, input)
             } else {
