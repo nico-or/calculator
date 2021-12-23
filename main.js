@@ -53,9 +53,36 @@ theDisplay = {
         this.operation = ""
     },
 
+    calculate(){
+        if (this.operation != "" && this.secondNumber != "") {
+            n1 = Number(this.firstNumber)
+            n2 = Number(this.secondNumber)
+            switch (this.operation) {
+                case "+":
+                    this.firstNumber = add(n1, n2)
+                    break;
+                case "-":
+                this.firstNumber = subtract(n1, n2)
+                break;
+                case "x":
+                this.firstNumber = multiply(n1, n2)
+                break;
+                case "÷":
+                this.firstNumber = divide(n1, n2)
+                break;
+                default:
+                    break;
+            }
+            this.secondNumber = ""
+            this.operation = ""
+        }
+    },
+
     newInput(input) {
         if (input == 'C') {
             this.reset()
+        } else if (input == '=') {
+            this.calculate()
         } else if (isNumber(input)){
             if (this.operation == "") {
                 this.firstNumber = this.addNumber(this.firstNumber, input)
