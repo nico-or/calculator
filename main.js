@@ -33,7 +33,7 @@ const trimNumber = function (number, decimals = 5) {
 // display object will hold input information
 // and update screen readings
 theDisplay = {
-    firstNumber: "0",
+    firstNumber: "",
     secondNumber: "",
     operation: "",
     screen: document.querySelector(".display"),
@@ -41,6 +41,11 @@ theDisplay = {
     updateMessage() {
         this.firstNumber = trimNumber(this.firstNumber)
         this.secondNumber = trimNumber(this.secondNumber)
+
+        if (this.firstNumber == ""){
+            return "0"
+        }
+        
         message = this.firstNumber
         if (this.operation != "") {
             message += this.operation
@@ -64,7 +69,7 @@ theDisplay = {
     },
 
     reset(){
-        this.firstNumber = "0"
+        this.firstNumber = ""
         this.secondNumber = ""
         this.operation = ""
     },
@@ -103,8 +108,8 @@ theDisplay = {
             this. operation = removeLast(this.operation)
         } else {
             this.firstNumber = removeLast(this.firstNumber)
-            if (this.firstNumber == "" || this.firstNumber == "-"){
-                this.firstNumber = "0"  
+            if (this.firstNumber == "-"){
+                this.firstNumber = ""  
             }
         }
     },
@@ -118,9 +123,9 @@ theDisplay = {
             this.calculate()
         } else if (isNumber(input)){
             if (this.operation == "") {
-                this.firstNumber = this.addNumber(this.firstNumber, input)
+                this.firstNumber += input
             } else {
-                this.secondNumber = this.addNumber(this.secondNumber, input)
+                this.secondNumber += input
             }
         } else if (isOperation(input) && this.operation == "") {
             this.operation = input
