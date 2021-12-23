@@ -48,13 +48,13 @@ theDisplay = {
     },
 
     newInput(input) {
-        if (input >= '0' || input <= '9'){
+        if (isNumber(input)){
             if (this.operation == "") {
                 this.firstNumber = this.addNumber(this.firstNumber, input)
             } else {
                 this.secondNumber = this.addNumber(this.secondNumber, input)
             }
-        } else if ('+-x÷'.includes(input)) {
+        } else if (isOperation(input)) {
             this.operation = input
         }
         this.updateScreen()
